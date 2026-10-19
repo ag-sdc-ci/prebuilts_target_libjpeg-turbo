@@ -1,0 +1,6 @@
+shadow prebuilt repo: libjpeg-turbo (target)
+  upstream: platform/external/libjpeg-turbo
+  api-level: 34 (branch 34-20261019)
+  blobs: org.blisslabs.ag.libjpeg.turbo-2001001.apex org.blisslabs.ag.libjpeg.turbo.dev-2001001.apex
+  dev-src: extracted dev payload + regenerated root Android.bp
+  date: 2026-10-19

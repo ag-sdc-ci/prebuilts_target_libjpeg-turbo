@@ -1,0 +1,85 @@
+package {
+    default_applicable_licenses: ["external_libjpeg-turbo_license"],
+}
+
+license {
+    name: "external_libjpeg-turbo_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-BSD",
+        "SPDX-license-identifier-Beerware",
+        "SPDX-license-identifier-MIT",
+        "SPDX-license-identifier-Zlib",
+        "legacy_notice",
+        "legacy_unencumbered",
+    ],
+    license_text: [
+        "LICENSE.md",
+    ],
+}
+
+prebuilt_apex {
+    name: "org.blisslabs.ag.libjpeg.turbo",
+    apex_name: "org.blisslabs.ag.libjpeg.turbo",
+    source_apex_name: "org.blisslabs.ag.libjpeg.turbo",
+    arch: {
+        x86_64: {
+            src: "org.blisslabs.ag.libjpeg.turbo-2001001.apex",
+        },
+    },
+    filename: "org.blisslabs.ag.libjpeg.turbo.apex",
+    prefer: true,
+    installable: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libjpeg",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    arch: {
+        x86_64: {
+            srcs: ["dev-src/lib/libjpeg.so"],
+        },
+    },
+    export_include_dirs: [
+        "dev-src/include",
+    ],
+    prefer: true,
+    apex_available: [
+        "com.android.mediaprovider",
+        "//apex_available:platform",
+    ],
+}
+
+cc_prebuilt_library_static {
+    name: "libjpeg_static",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    arch: {
+        x86_64: {
+            srcs: ["dev-src/lib/libjpeg.a"],
+        },
+    },
+    export_include_dirs: [
+        "dev-src/include",
+    ],
+    prefer: true,
+}
+
+cc_prebuilt_library_static {
+    name: "libjpeg_static_ndk",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    arch: {
+        x86_64: {
+            srcs: ["dev-src/lib/libjpeg_static_ndk.a"],
+        },
+    },
+    export_include_dirs: [
+        "dev-src/include",
+    ],
+    prefer: true,
+}

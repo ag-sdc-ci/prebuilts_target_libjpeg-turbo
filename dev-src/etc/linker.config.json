@@ -1,0 +1,18 @@
+{
+	"provideLibs": [	
+		    "libdummy_binary_libjpeg-static-ndk.a-x86_64-v2.so",
+		    "libdummy_binary_libjpeg-static-ndk.a.so",
+		    "libdummy_binary_libjpeg.a-x86_64-v2.so",
+		    "libdummy_binary_libjpeg.a.so",
+		    "libdummy_headers_libjpeg_turbo-x86_64-v2.so",
+		    "libdummy_headers_libjpeg_turbo.so",
+		    "libdummy_libjpeg_turbo_dev-x86_64-v2.so",
+		    "libdummy_libjpeg_turbo_dev.so",
+		    "libdummy_pkgconfig_libjpeg_turbo-x86_64-v2.so",
+		    "libdummy_pkgconfig_libjpeg_turbo.so"
+	],
+	"requireLibs": [	
+		    "libdummy-libjpeg-turbo.so"
+	],
+	"visible": true
+}
