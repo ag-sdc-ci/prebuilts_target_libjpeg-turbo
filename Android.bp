@@ -1,9 +1,9 @@
 package {
-    default_applicable_licenses: ["external_libjpeg-turbo_license"],
+    default_applicable_licenses: ["libjpeg_turbo_shadow_license"],
 }
 
 license {
-    name: "external_libjpeg-turbo_license",
+    name: "libjpeg_turbo_shadow_license",
     visibility: [":__subpackages__"],
     license_kinds: [
         "SPDX-license-identifier-BSD",
