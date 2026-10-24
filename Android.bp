@@ -34,8 +34,11 @@ prebuilt_apex {
 
 cc_prebuilt_library_shared {
     name: "libjpeg",
+    host_supported: true,
     vendor_available: true,
     product_available: true,
+    sdk_version: "current",
+    min_sdk_version: "apex_inherit",
     arch: {
         x86_64: {
             srcs: ["dev-src/lib/libjpeg.so"],
