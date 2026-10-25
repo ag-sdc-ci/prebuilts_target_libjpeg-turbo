@@ -32,21 +32,23 @@ prebuilt_apex {
     installable: true,
 }
 
-cc_prebuilt_library_shared {
+cc_prebuilt_library {
     name: "libjpeg",
     host_supported: true,
+    compile_multilib: "64",
     vendor_available: true,
     product_available: true,
     sdk_version: "current",
     min_sdk_version: "apex_inherit",
-    arch: {
-        x86_64: {
-            srcs: ["dev-src/lib/libjpeg.so"],
-        },
-    },
     export_include_dirs: [
         "dev-src/include",
     ],
+    shared: {
+        srcs: ["dev-src/lib/libjpeg.so"],
+    },
+    static: {
+        srcs: ["dev-src/lib/libjpeg.a"],
+    },
     prefer: true,
     apex_available: [
         "com.android.mediaprovider",
