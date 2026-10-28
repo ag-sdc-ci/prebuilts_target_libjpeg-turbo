@@ -41,13 +41,13 @@ cc_prebuilt_library {
     sdk_version: "current",
     min_sdk_version: "apex_inherit",
     export_include_dirs: [
-        "dev-src/include",
+        "include",
     ],
     shared: {
-        srcs: ["dev-src/lib/libjpeg.so"],
+        srcs: ["lib64/libjpeg.so"],
     },
     static: {
-        srcs: ["dev-src/lib/libjpeg.a"],
+        srcs: ["lib64/libjpeg.a"],
     },
     prefer: true,
     apex_available: [
@@ -62,11 +62,11 @@ cc_prebuilt_library_static {
     product_available: true,
     arch: {
         x86_64: {
-            srcs: ["dev-src/lib/libjpeg.a"],
+            srcs: ["lib64/libjpeg.a"],
         },
     },
     export_include_dirs: [
-        "dev-src/include",
+        "include",
     ],
     prefer: true,
 }
@@ -77,11 +77,11 @@ cc_prebuilt_library_static {
     product_available: true,
     arch: {
         x86_64: {
-            srcs: ["dev-src/lib/libjpeg_static_ndk.a"],
+            srcs: ["lib64/libjpeg_static_ndk.a"],
         },
     },
     export_include_dirs: [
-        "dev-src/include",
+        "include",
     ],
     prefer: true,
 }
